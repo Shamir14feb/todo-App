@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do App</title>
+</head>
+
+<body>
+    <h1 class="main-heading">What Should Be Done..?</h1>
+
+    <input type="text" id="toDoList" placeholder="Enter New List">
+    <button type="button" id="saveListButton">Create new List</button>
+
+    <div id="viewAllList"></div>
+
+    <div id="singleList">
+        <i class="fa-solid fa-xmark" onclick="document.querySelector('#singleList').style.display = 'none'"></i>
+        
+        <div class="heading">
+            <h2 class="list-sub-heading"></h2>
+            <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+        
+        <div class="addTask">
+            <input type="text" class="add-item-input">
+            <button id="addTaskButton" class="add-task-button">Add Task</button>
+            <button class="add-task-button delete-button" id="delete-list">Delete this List</button>
+        </div>
+
+        <ul class="todo-item-container"></ul>
+    </div>
+
+    <div class="edit-todo">
+        <i class="fa-solid fa-xmark" onclick="document.querySelector('.edit-todo').classList.toggle('open-edit')"></i>
+        <h2>Update <span></span> Name</h2>
+        <span id="previousUpdateName"></span>
+        <span id="currentTaskName"></span>
+        <input type="text" class="add-item-input">
+        <button class="add-task-button" id="update">Update</button>
+    </div>
+
+    <div class="edit-todo delete-todo">
+        <i class="fa-solid fa-xmark" onclick="document.querySelector('.delete-todo').classList.toggle('open-edit')"></i>
+        <h2>Are You Sure You Want to Delete this Task</h2>
+        <span id="ListName"></span>
+        <span id="currentTask"></span>
+        <button class="add-task-button delete-button" id="delete">Delete</button>
+    </div>
+
+    <script src="https://kit.fontawesome.com/f64978ab41.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
